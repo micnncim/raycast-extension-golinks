@@ -2,6 +2,8 @@
 
 A [Raycast Extension](https://developers.raycast.com) for [GoLinks](https://www.golinks.io).
 
+https://user-images.githubusercontent.com/21333876/141518995-a408d0f3-c4cf-418f-abbc-4cd555fa40c8.mov
+
 ## Getting Started
 
 ![screenshot-preferences](./docs/assets/screenshot-preferences.png)
