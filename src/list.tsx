@@ -1,22 +1,22 @@
 import { ActionPanel, CopyToClipboardAction, List, OpenInBrowserAction } from '@raycast/api'
 import { useFetch } from './api'
-import { Golink } from './types'
+import { GoLink } from './types'
 
-export default function ListGolink() {
+export default function ListGoLink() {
   const { data, isLoading } = useFetch('/golinks?limit=100')
 
-  const golinks = (data as { results: Golink[] })?.results || []
+  const golinks = (data as { results: GoLink[] })?.results || []
 
   return (
-    <List isLoading={golinks?.length === 0 || isLoading} searchBarPlaceholder="Filter golinks by name...">
+    <List isLoading={golinks?.length === 0 || isLoading} searchBarPlaceholder="Filter GoLinks by name...">
       {golinks.map((l) => {
-        return <GolinkListItem key={l.gid} golink={l} />
+        return <GoLinkListItem key={l.gid} golink={l} />
       })}
     </List>
   )
 }
 
-function GolinkListItem(props: { golink: Golink }) {
+function GoLinkListItem(props: { golink: GoLink }) {
   const golink = props.golink
 
   return (
