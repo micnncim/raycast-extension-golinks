@@ -1,9 +1,16 @@
-import { ActionPanel, CopyToClipboardAction, List, OpenInBrowserAction } from '@raycast/api'
+import { ActionPanel, CopyToClipboardAction, Icon, List, OpenInBrowserAction } from '@raycast/api'
 import { useFetch } from './api'
 import { GoLink } from './types'
 
 export default function ListGoLink() {
-  const { data, isLoading } = useFetch('/golinks?limit=100')
+  const { data, isLoading, error } = useFetch('/golinks?limit=100')
+  if (error) {
+    return (
+      <List>
+        <List.Item icon={Icon.ExclamationMark} title="Error occurred" accessoryTitle={error.message} />
+      </List>
+    )
+  }
 
   const golinks = (data as { results: GoLink[] })?.results || []
 
