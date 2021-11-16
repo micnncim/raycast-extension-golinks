@@ -2,7 +2,7 @@
 
 A [Raycast Extension](https://developers.raycast.com) for [GoLinks](https://www.golinks.io).
 
-https://user-images.githubusercontent.com/21333876/141827027-ccedcd91-a174-4e2c-acdc-590061f13f6e.mov
+https://user-images.githubusercontent.com/21333876/141971817-a414d72f-cd85-418a-818d-a95d80b1c71d.mov
 
 ## Getting Started
 
